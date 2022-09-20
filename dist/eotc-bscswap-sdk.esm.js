@@ -378,6 +378,10 @@ var Currency = /*#__PURE__*/function () {
     Currency.ETHER = new Currency(decimals, symbol, name);
   };
 
+  Currency.getETHER = function getETHER() {
+    return Currency.ETHER;
+  };
+
   return Currency;
 }();
 /**

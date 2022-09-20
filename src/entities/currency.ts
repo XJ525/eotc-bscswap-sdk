@@ -20,6 +20,9 @@ export class Currency {
   public static setETHER(decimals: number, symbol: string, name: string) {
     Currency.ETHER = new Currency(decimals, symbol, name)
   }
+  public static getETHER(): Currency {
+    return Currency.ETHER
+  }
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
    * @param decimals decimals of the currency

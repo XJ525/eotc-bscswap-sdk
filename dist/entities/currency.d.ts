@@ -12,6 +12,7 @@ export declare class Currency {
      */
     static ETHER: Currency;
     static setETHER(decimals: number, symbol: string, name: string): void;
+    static getETHER(): Currency;
     /**
      * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
      * @param decimals decimals of the currency
