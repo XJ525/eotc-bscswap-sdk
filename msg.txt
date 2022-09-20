@@ -1,0 +1,13 @@
+package.json
+	bscswap-test-sdk 	sdk名字
+	version				版本号
+
+constants.ts
+	FACTORY_ADDRESS		swap的工厂合约地址
+	INIT_CODE_HASH 		初始化代码哈希
+	
+entities/token.ts
+	//添加三条链
+	BSC_TSET
+	BSC
+	ChainId.MATIC
