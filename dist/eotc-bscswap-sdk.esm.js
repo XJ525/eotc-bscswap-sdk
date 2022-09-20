@@ -599,7 +599,7 @@ var CurrencyAmount = /*#__PURE__*/function (_Fraction) {
 
 
   CurrencyAmount.ether = function ether(amount) {
-    return new CurrencyAmount(ETHER, amount);
+    return new CurrencyAmount(Currency.ETHER, amount);
   };
 
   var _proto = CurrencyAmount.prototype;
@@ -974,8 +974,8 @@ var Route = /*#__PURE__*/function () {
     !pairs.every(function (pair) {
       return pair.chainId === pairs[0].chainId;
     }) ? process.env.NODE_ENV !== "production" ? invariant(false, 'CHAIN_IDS') : invariant(false) : void 0;
-    !(input instanceof Token && pairs[0].involvesToken(input) || input === ETHER && pairs[0].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'INPUT') : invariant(false) : void 0;
-    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || output === ETHER && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'OUTPUT') : invariant(false) : void 0;
+    !(input instanceof Token && pairs[0].involvesToken(input) || input === Currency.ETHER && pairs[0].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'INPUT') : invariant(false) : void 0;
+    !(typeof output === 'undefined' || output instanceof Token && pairs[pairs.length - 1].involvesToken(output) || output === Currency.ETHER && pairs[pairs.length - 1].involvesToken(WETH[pairs[0].chainId])) ? process.env.NODE_ENV !== "production" ? invariant(false, 'OUTPUT') : invariant(false) : void 0;
     var path = [input instanceof Token ? input : WETH[pairs[0].chainId]];
 
     for (var _iterator = _createForOfIteratorHelperLoose(pairs.entries()), _step; !(_step = _iterator()).done;) {
@@ -1405,8 +1405,8 @@ var Router = /*#__PURE__*/function () {
 
 
   Router.swapCallParameters = function swapCallParameters(trade, options) {
-    var etherIn = trade.inputAmount.currency === ETHER;
-    var etherOut = trade.outputAmount.currency === ETHER; // the router does not support both ether in and out
+    var etherIn = trade.inputAmount.currency === Currency.ETHER;
+    var etherOut = trade.outputAmount.currency === Currency.ETHER; // the router does not support both ether in and out
 
     !!(etherIn && etherOut) ? process.env.NODE_ENV !== "production" ? invariant(false, 'ETHER_IN_OUT') : invariant(false) : void 0;
     !(options.ttl > 0) ? process.env.NODE_ENV !== "production" ? invariant(false, 'TTL') : invariant(false) : void 0;

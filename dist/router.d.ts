@@ -1,4 +1,4 @@
-import { Percent, Trade } from './entities';
+import { /*ETHER,*/ Percent, Trade } from './entities';
 /**
  * Options for producing the arguments to send call to the router.
  */
