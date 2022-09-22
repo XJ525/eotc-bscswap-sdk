@@ -774,10 +774,23 @@ var Price = /*#__PURE__*/function (_Fraction) {
 
 var PAIR_ADDRESS_CACHE = {};
 var Pair = /*#__PURE__*/function () {
-  function Pair(tokenAmountA, tokenAmountB) {
+  //  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount) {
+  // //   const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
+  // //     ? [tokenAmountA, tokenAmountB]
+  // //     : [tokenAmountB, tokenAmountA]
+  // //   this.liquidityToken = new Token(
+  // //     tokenAmounts[0].token.chainId,
+  // //     Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token),
+  // //     18,
+  // //     'UNI-V2',
+  // //     'Uniswap V2'
+  // //   )
+  // //   this.tokenAmounts = tokenAmounts as [TokenAmount, TokenAmount]
+  //  }
+  function Pair(tokenAmountA, tokenAmountB, liquidityTokenAddress) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'UNI-V2', 'Uniswap V2');
+    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, liquidityTokenAddress || Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'UNI-V2', 'Uniswap V2');
     this.tokenAmounts = tokenAmounts;
   }
 

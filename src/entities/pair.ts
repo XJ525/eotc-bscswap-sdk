@@ -48,13 +48,26 @@ export class Pair {
     return PAIR_ADDRESS_CACHE[tokens[0].address][tokens[1].address]
   }
 
-  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount) {
+  //  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount) {
+  // //   const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
+  // //     ? [tokenAmountA, tokenAmountB]
+  // //     : [tokenAmountB, tokenAmountA]
+  // //   this.liquidityToken = new Token(
+  // //     tokenAmounts[0].token.chainId,
+  // //     Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token),
+  // //     18,
+  // //     'UNI-V2',
+  // //     'Uniswap V2'
+  // //   )
+  // //   this.tokenAmounts = tokenAmounts as [TokenAmount, TokenAmount]
+  //  }
+  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, liquidityTokenAddress?: string) {
     const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
       ? [tokenAmountA, tokenAmountB]
       : [tokenAmountB, tokenAmountA]
     this.liquidityToken = new Token(
       tokenAmounts[0].token.chainId,
-      Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token),
+      liquidityTokenAddress || Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token),
       18,
       'UNI-V2',
       'Uniswap V2'
