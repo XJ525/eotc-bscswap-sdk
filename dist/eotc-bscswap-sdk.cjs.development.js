@@ -790,6 +790,7 @@ var Pair = /*#__PURE__*/function () {
   function Pair(tokenAmountA, tokenAmountB, liquidityTokenAddress, liquidityToken) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
+    console.log(liquidityToken, 'liquidityToken');
 
     if (liquidityToken) {
       this.liquidityToken = liquidityToken;
