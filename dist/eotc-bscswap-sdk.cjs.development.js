@@ -787,10 +787,16 @@ var Pair = /*#__PURE__*/function () {
   // //   )
   // //   this.tokenAmounts = tokenAmounts as [TokenAmount, TokenAmount]
   //  }
-  function Pair(tokenAmountA, tokenAmountB, liquidityTokenAddress) {
+  function Pair(tokenAmountA, tokenAmountB, liquidityTokenAddress, liquidityToken) {
     var tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
     ? [tokenAmountA, tokenAmountB] : [tokenAmountB, tokenAmountA];
-    this.liquidityToken = new Token(tokenAmounts[0].token.chainId, liquidityTokenAddress || Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'UNI-V2', 'Uniswap V2');
+
+    if (liquidityToken) {
+      this.liquidityToken = liquidityToken;
+    } else {
+      this.liquidityToken = new Token(tokenAmounts[0].token.chainId, liquidityTokenAddress || Pair.getAddress(tokenAmounts[0].token, tokenAmounts[1].token), 18, 'UNI-V2', 'Uniswap V2');
+    }
+
     this.tokenAmounts = tokenAmounts;
   }
 
