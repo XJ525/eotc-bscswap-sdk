@@ -83,4 +83,5 @@ export const WETH = {
   [ChainId.BSC_TSET]: new Token(ChainId.BSC_TSET, '0x0f298F5dAF0fE2C4817C6F51CA7Cd56aaD308a05', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.BSC]: new Token(ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC'),
+  [ChainId.OKExChain]: new Token(ChainId.OKExChain, '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15', 18, 'WOKT', 'Wrapped OKT'),
 }

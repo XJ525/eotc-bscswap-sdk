@@ -70,7 +70,6 @@ export class Pair {
     const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
       ? [tokenAmountA, tokenAmountB]
       : [tokenAmountB, tokenAmountA]
-    console.log(liquidityToken, 'liquidityToken')
     if (liquidityToken) {
       this.liquidityToken = liquidityToken
     } else {
