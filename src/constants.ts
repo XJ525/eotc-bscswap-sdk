@@ -12,7 +12,8 @@ export enum ChainId {
   BSC = 56,
   MATIC = 137,
   BSC_TSET = 97,
-  OKExChain = 66
+  OKExChain = 66,
+  Huobi = 128
 }
 
 export enum TradeType {
