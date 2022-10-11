@@ -9,8 +9,15 @@ export declare enum ChainId {
     BSC = 56,
     MATIC = 137,
     BSC_TSET = 97,
-    OKExChain = 66,
-    Huobi = 128
+    OKEXCHAIN = 66,
+    HUOBI = 128,
+    OPTIMISM = 10,
+    ARBITRUM = 42161,
+    GNOSIS = 100,
+    AVALANCHE = 43114,
+    FANTOM = 250,
+    KLAYTN = 8217,
+    AURORA = 1313161554
 }
 export declare enum TradeType {
     EXACT_INPUT = 0,

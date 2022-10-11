@@ -83,6 +83,14 @@ export const WETH = {
   [ChainId.BSC_TSET]: new Token(ChainId.BSC_TSET, '0x0f298F5dAF0fE2C4817C6F51CA7Cd56aaD308a05', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.BSC]: new Token(ChainId.BSC, '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 18, 'WBNB', 'Wrapped BNB'),
   [ChainId.MATIC]: new Token(ChainId.MATIC, '0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270', 18, 'WMATIC', 'Wrapped MATIC'),
-  [ChainId.OKExChain]: new Token(ChainId.OKExChain, '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15', 18, 'WOKT', 'Wrapped OKT'),
-  [ChainId.Huobi]: new Token(ChainId.Huobi, '0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f', 18, 'WHT', 'Wrapped HT')
+  [ChainId.OKEXCHAIN]: new Token(ChainId.OKEXCHAIN, '0x8f8526dbfd6e38e3d8307702ca8469bae6c56c15', 18, 'WOKT', 'Wrapped OKT'),
+  [ChainId.HUOBI]: new Token(ChainId.HUOBI, '0x5545153ccfca01fbd7dd11c0b23ba694d9509a6f', 18, 'WHT', 'Wrapped HT'),
+  [ChainId.OPTIMISM]: new Token(ChainId.OPTIMISM, '0x4200000000000000000000000000000000000006', 18, 'WETH', 'Wrapped Ether'),
+  [ChainId.ARBITRUM]: new Token(ChainId.ARBITRUM, '0x82aF49447D8a07e3bd95BD0d56f35241523fBab1', 18, 'WETH', 'Wrapped Ether'),
+  [ChainId.GNOSIS]: new Token(ChainId.GNOSIS, '0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1', 18, 'WXDAI', 'Wrapped XDAI'),
+  [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7', 18, 'WAVAX', 'Wrapped AVAX'),
+  [ChainId.FANTOM]: new Token(ChainId.FANTOM, '0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83', 18, 'WFTM', 'Wrapped Fantom'),
+  [ChainId.KLAYTN]: new Token(ChainId.KLAYTN, '0xe4f05a66ec68b54a58b17c22107b02e0232cc817', 18, 'WKLAY', 'Wrapped Klay'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xC9BdeEd33CD01541e1eeD10f90519d2C06Fe3feB', 18, 'WETH', 'Wrapped Ether')
+
 }
